@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="./jquery.js"></script>
+    <script>
+    $(document).ready(function(){
+        console.log( "document loaded" );
+    });
+
+    $(window).on("load", function() {
+        console.log( "window loaded");
+    });
+    </script>
+
+    <title>W&uuml;rfel - Login</title>
+    <link href="style.css" type="text/css" rel="stylesheet" />
+    <script src="server.js"></script>
+	<style type="text/css" rel="stylesheet">
+	body
+{
+    background-color: #f5f5f5;
+    padding:0px;
+    margin: 0px;
+}
+#main
+{
+position: absolute;
+    background-color: #fbfbfb;
+    height: 100%;
+    width:50%;
+    margin-left: 25%;  
+}
+nav
+{
+    position: absolute;  
+       
+    background-color: #f8f8f8;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    height: 15%;
+     left: 1%;
+    top: 1%;
+    width: 17%;
+}
+nav li
+{
+    display: block;
+    list-style: none;
+    font-size: 16pt;
+    padding-top: 10px;
+}
+nav a
+{
+    text-decoration: none;
+    color: black;
+}
+nav ul
+{
+
+    padding:5px;
+    margin:0px;
+    
+}
+.navaktuell
+{
+color:#1199ff;
+}
+#Login
+{
+    position: absolute;
+    background-color: #f8f8f8;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    height: 15%;
+    left: 1%;
+    top: 42%;
+    width: 17%;
+    
+}
+#loginfeld
+{
+    width: 90%;
+    
+}
+#pwfeld
+{    
+    width: 90%;
+    margin-bottom: 5px;
+}
+#jetztregistrieren
+{
+    position: absolute;
+    width: 60%;
+    height: 40%;
+    left: 30%;
+    bottom: 20%;
+    background-color: #f8f8f8;
+}
+.registration
+{
+    margin-bottom: 5px;
+}
+
+
+	</style>
+	
+</head>
+<body>
+	<div id="main">
+			<nav>
+				<ul>
+                    <li><a class = "navaktuell " href="Login.html">Login</a>
+
+                    </li>
+                   
+
+                </ul>
+
+					
+            </nav>
+
+
+           
+            <div id="Login">
+                <form method="post" action="/Wurfel.html">
+                  <input type="submit" id="penis" onclick="click()" value="login"></input>
+                  </form>
+              </div>
+			
+
+            <div id="jetztregistrieren">
+                <h3>Jetzt Registieren!</h3>
+                <p>Jetzt ganz schnell, einfach und kostenlos Registrieren.</p>
+                
+                
+                
+                <form method="post" action="registrierung.js">
+				Name: <br /><input class = "registration" type="text" name"=loginre"> <br/>
+				Passwort:<br /> <input class = "registration" type="password" name="pwre">   <br />
+				Email Adresse:<br /> <input class = "registration" type="password" name="emailre">   <br />
+				<input type="submit" name="RegistrierungsButton" value="Registrieren">
+				</form>           
+            
+                     
+            
+            
+            </div>
+            
+
+			
+		</div>
+
+
+    
+</body>
+</html>

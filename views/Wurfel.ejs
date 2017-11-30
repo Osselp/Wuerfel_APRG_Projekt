@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>W&uuml;rfel - W&uuml;rfel</title>
+    <script src="server.js"></script>
+	<style type="text/css" rel="stylesheet">
+	body
+{
+    background-color: #f5f5f5;
+    padding:0px;
+    margin: 0px;
+}
+#main
+{
+position: absolute;
+    background-color: #fbfbfb;
+    height: 100%;
+    width:50%;
+    margin-left: 25%;  
+}
+
+
+
+#LSLT{
+      position: absolute;
+      left: 30%;
+      top: 25%;
+      xbackground-color:blue;
+      width: 40%;
+      height: 55%;
+}
+#save{
+      position: absolute;
+      left: 0%;
+      top: 50%;
+      width: 100%;
+     height: 10%; 
+      
+      
+}
+#load  {
+     position: absolute;
+      left: 0%;
+      top: 65%;
+      width: 100%;
+      height: 10%;
+     
+}
+#throw      {
+      position: absolute;
+      left: 0%;
+      top: 25%;
+      width:100%;
+    height: 10%; 
+}       
+#logout
+{
+     position: absolute;
+      top: 5%;      
+      right: 5%;
+      height: 5%;
+      width: auto;
+}
+#xeinstellungen
+{
+    position:absolute;
+    background-color: green;
+    right:5%;
+    top:5%;
+    width:100%;
+    height:10%
+}
+
+
+#anzwufel
+{
+width:100%;
+}
+#augenanzahl
+{
+width:100%;
+}
+#anzwurfe
+{
+width:100%;
+}
+
+
+
+
+	</style>
+	
+</head>
+
+<body>
+	<div id="main">
+	
+                <form method="get" action="/logout">
+				<input id="logout"type="submit" name="AusloggenButton" value="Ausloggen">
+				</form>  
+              
+             <div id="LSLT">
+                   <form method="post" action="/loadPreset">
+                 <input id="load"type="submit" name="LoadButton" value="Load">
+                  </form>
+                  
+              
+                
+
+                <form id="wurfeldaten" method="post" action="/savePreset">   
+
+                <br><input id="anzwufel" type="number" name="anzwurfel" placeholder="Anzahl der Würfel" >
+                
+                <br> <input id="augenanzahl" type="number" name="pass" placeholder="Augenanzahl"> 
+                
+                <br><input type="number" name="anzwurfe" id="anzwurfe" placeholder="Anzahl der Würfe"> <!-- value = <%=dice %> -->
+                
+                <br><input id="save" type="submit" value="Save">
+                </form>
+
+                <input id="throw" type="submit" value="W&uuml;rfeln" onclick="roll()">
+			</div>          
+               
+
+
+			
+</div>
+			
+		
+<script>
+var rolls    = document.getElementById("anzwurfe")
+var dice     = document.getElementById("anzwufel")
+var sides    = document.getElementById("augenanzahl")
+
+
+    function roll() {
+ for(var c1 = 0; c1 < rolls.value; c1++){
+  trial = 'Roll: '
+  for(var c2 = 0; c2 < dice.value; c2++){
+   var jimmy = (Math.floor(Math.random() * sides.value) + 1);
+   trial = trial + ' ' + jimmy;
+  }
+  alert(trial);
+ }
+}
+</script>
+</body>
+</html>

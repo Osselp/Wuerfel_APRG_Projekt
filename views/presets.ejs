@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Presets</title>
+    </head>
+    <body>
+        <h1>Liste aller Presets</h1>
+        <form method="get" action="/zurueck">
+            <input type="submit" value="Zurück"></input>
+        </form>
+        
+		<ul>
+			<% for(var i=0; i < userPresets.length; i++){ %>
+				<li> Rolls: <%= userPresets[i].rolls %>  
+                     Sides: <%= userPresets[i].sides %> 
+                     Dice: 	<%= userPresets[i].dice %>
+                     <form>
+                     <input id="<%= userPresets[i]._id %>" type="submit" value="Load Preset" onclick ="PresetLoad()" method="post">
+                     <input id="<%= userPresets[i]._id %>" type="submit" value="Delete" onclick ="PresetDelete()" method="post">
+                    </form>
+				</li>
+			<% } %>
+		</ul>
+		
+    </body>
+    <script>
+    </script>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="./jquery.js"></script>
+    <script>
+    $(document).ready(function(){
+        console.log( "document loaded" );
+    });
+
+    $(window).on("load", function() {
+        console.log( "window loaded");
+    });
+    </script>
+
+    <title>W&uuml;rfel - Login</title>
+    <script src="server.js"></script>
+	<style type="text/css" rel="stylesheet">
+	body
+{
+    background-color: #f5f5f5;
+    padding:0px;
+    margin: 0px;
+}
+#main
+{
+position: absolute;
+    background-color: #fbfbfb;
+    height: 100%;
+    width:50%;
+    margin-left: 25%;  
+}
+
+#Login
+{
+    position: absolute;
+    background-color: #f8f8f8;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    height: 15%;
+    left: 1%;
+    top: 42%;
+    width: 17%;
+    
+}
+
+#jetztregistrieren
+{
+    position: absolute;
+    width: 60%;
+    height: 40%;
+    left: 30%;
+    bottom: 20%;
+    background-color: #f8f8f8;
+}
+
+#header{
+    position: absolute;
+    left: 30%;
+}
+
+	</style>
+	
+</head>
+<body>
+	<div id="main">
+			
+
+
+            <div id="header">
+                <H1>Dice Roller 3000</H1>
+            </div>
+           
+            <div id="Login">
+                <form method="post" action="/Wurfel">
+                    Name: <br /><input type="text" name="username"> <br/>
+                    Passwort:<br /> <input type="password" name="password">   <br />
+                  <input type="submit" value="login"></input>
+                  </form>
+              </div>
+			
+
+            <div id="jetztregistrieren">
+                <h3>Jetzt Registieren!</h3>
+                <p>Jetzt ganz schnell, einfach und kostenlos Registrieren.</p>
+                
+                
+                
+                <form method="post" action="/registrierung">
+				Name: <br /><input class = "registration" type="text" name="loginre"> <br/>
+				Passwort:<br /> <input class = "registration" type="password" name="pwre">   <br />
+				Email Adresse:<br /> <input class = "registration" type="email" name="emailre">   <br />
+				<input type="submit" name="RegistrierungsButton" value="Registrieren">
+				</form>           
+            
+                     
+            
+            
+            </div>
+            
+
+			
+		</div>
+
+
+    
+</body>
+</html>
